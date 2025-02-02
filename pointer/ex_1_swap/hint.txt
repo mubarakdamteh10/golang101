@@ -1,0 +1,13 @@
+Pseudocode code Hint :
+
+func swap(a, b){
+
+    // Step 1: Store the value of *a in a temporary variable
+    // temp := *a  
+
+    // Step 2: Assign the value of *b to *a
+    // *a = *b  
+
+    // Step 3: Assign the temporary variable to *b
+    // *b = temp
+}
