@@ -9,7 +9,7 @@ func incrementByValueHint(num int) {
 	// ไม่มีการเปลี่ยนแปลงค่าของตัวแปรที่ใส่ใน parameter แต่อย่างใด
 }
 
-func incrementByReferenceHint(num *int) {
+func incrementByPointerHint(num *int) {
 	*num = *num + 1
 	// เข้าถึงค่าผ่าน pointer และเพิ่มค่าไปอีก 1
 	// ตัวแปรที่ส่งใน parameter จะถูกเปลี่ยนค่าไปด้วย
@@ -24,6 +24,6 @@ func hint() {
 	incrementByValueHint(x)                          // เรียกใช้ฟังก์ชันแบบ Pass-by-Value
 	fmt.Println("หลังจากเรียก incrementByValue:", x) // คาดหวังว่า x ยังควรเป็น 10 (ไม่เปลี่ยนแปลง)
 
-	incrementByReferenceHint(&x)                       // เรียกใช้ฟังก์ชันแบบ Pass-by-Reference โดยส่งที่อยู่หน่วยความจำของ x
+	incrementByPointerHint(&x)                         // เรียกใช้ฟังก์ชันแบบ Pass-by-Reference โดยส่งที่อยู่หน่วยความจำของ x
 	fmt.Println("หลังจากเรียก incrementByPointer:", x) // คาดหวังว่า x ควรเปลี่ยนเป็น 11
 }
